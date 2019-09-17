@@ -1,0 +1,11 @@
+language: go
+
+go:
+  - 1.13.x
+  - master
+
+script:
+  - sed -i 's#golang.org/x/tools/internal/jsonrpc2#github.com/SB-IM/jsonrpc2#g' jsonrpc2_test.go
+  - go mod init test
+  - go test
+
