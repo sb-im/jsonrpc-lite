@@ -6,17 +6,22 @@ import (
 
 const (
 	// CodeParseError is used when invalid JSON was received by the server.
-	CodeParseError = -32700
+	CodeParseError    = -32700
+	MessageParseError = "Parse error"
 	//CodeInvalidRequest is used when the JSON sent is not a valid Request object.
-	CodeInvalidRequest = -32600
+	CodeInvalidRequest    = -32600
+	MessageInvalidRequest = "Invalid Request"
 	// CodeMethodNotFound should be returned by the handler when the method does
 	// not exist / is not available.
-	CodeMethodNotFound = -32601
+	CodeMethodNotFound    = -32601
+	MessageMethodNotFound = "Method not found"
 	// CodeInvalidParams should be returned by the handler when method
 	// parameter(s) were invalid.
-	CodeInvalidParams = -32602
+	CodeInvalidParams    = -32602
+	MessageInvalidParams = "Invalid params"
 	// CodeInternalError is not currently returned but defined for completeness.
-	CodeInternalError = -32603
+	CodeInternalError    = -32603
+	MessageInternalError = "Internal error"
 )
 
 // Error represents a structured error in a Response.
@@ -36,47 +41,42 @@ func (err *Errors) Error() string {
 	return err.Message
 }
 
+// Set Errors ParseError
 func (e *Errors) ParseError(data interface{}) {
 	rawData, _ := marshalToRaw(data)
-	e = &Errors{
-		Code: CodeParseError,
-		Message: "Parse error",
-		Data:    rawData,
-	}
+	e.Code = CodeParseError
+	e.Message = MessageParseError
+	e.Data = rawData
 }
 
+// Set Errors InvalidRequest
 func (e *Errors) InvalidRequest(data interface{}) {
 	rawData, _ := marshalToRaw(data)
-	e = &Errors{
-		Code: CodeInvalidRequest,
-		Message: "Invalid Request",
-		Data:    rawData,
-	}
+	e.Code = CodeInvalidRequest
+	e.Message = MessageInvalidRequest
+	e.Data = rawData
 }
 
+// Set Errors MethodNotFound
 func (e *Errors) MethodNotFound(data interface{}) {
 	rawData, _ := marshalToRaw(data)
-	e = &Errors{
-		Code: CodeMethodNotFound,
-		Message: "Method not found",
-		Data:    rawData,
-	}
+	e.Code = CodeMethodNotFound
+	e.Message = MessageMethodNotFound
+	e.Data = rawData
 }
 
+// Set Errors InvalidParams
 func (e *Errors) InvalidParams(data interface{}) {
 	rawData, _ := marshalToRaw(data)
-	e = &Errors{
-		Code: CodeInvalidParams,
-		Message: "Invalid params",
-		Data:    rawData,
-	}
+	e.Code = CodeInvalidParams
+	e.Message = MessageInvalidParams
+	e.Data = rawData
 }
 
+// Set Errors InternalError
 func (e *Errors) InternalError(data interface{}) {
 	rawData, _ := marshalToRaw(data)
-	e = &Errors{
-		Code: CodeInternalError,
-		Message: "Internal error",
-		Data:    rawData,
-	}
+	e.Code = CodeInternalError
+	e.Message = MessageInternalError
+	e.Data = rawData
 }
