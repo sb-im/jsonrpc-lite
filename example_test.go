@@ -2,7 +2,7 @@ package jsonrpc_test
 
 import (
 	"fmt"
-	"jsonrpc"
+	"github.com/SB-IM/jsonrpc-lite"
 )
 
 func ExampleParseObject() {
