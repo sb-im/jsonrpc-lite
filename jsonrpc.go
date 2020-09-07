@@ -149,8 +149,9 @@ func NewError(id interface{}, code int64, message string, data interface{}) *Jso
 // NewErrors(1234).Error.MethodNotFound("233").ToJSON()
 func NewErrors(id interface{}) *Jsonrpc {
 	return &Jsonrpc{
-		Type: TypeErrors,
-		ID:   NewID(id),
+		Type:   TypeErrors,
+		ID:     NewID(id),
+		Errors: &Errors{},
 	}
 }
 

@@ -52,6 +52,14 @@ func TestNewError(t *testing.T) {
 	}
 }
 
+func TestNewErrors(t *testing.T) {
+	rpc := NewErrors(nil)
+	rpc.Errors.MethodNotFound(nil)
+	if rpc.Errors.Code != CodeMethodNotFound {
+		t.Error(rpc)
+	}
+}
+
 func TestBatch(t *testing.T) {
 	rpcs := Batch([]byte(test_batch_jsonrpc))
 	if len(rpcs) != 6 {
