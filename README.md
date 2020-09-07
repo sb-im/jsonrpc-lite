@@ -1,18 +1,17 @@
 # jsonrpc-lite
 
+[![Build Status](https://travis-ci.org/SB-IM/jsonrpc-lite.svg?branch=master)](https://travis-ci.org/SB-IM/jsonrpc-lite)
+[![codecov](https://codecov.io/gh/SB-IM/jsonrpc-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/SB-IM/jsonrpc-lite)
+[![Documentation](https://godoc.org/github.com/SB-IM/jsonrpc-lite?status.svg)](http://godoc.org/github.com/SB-IM/jsonrpc-lite)
+[![license](https://img.shields.io/github/license/SB-IM/jsonrpc-lite.svg?maxAge=2592000)](https://github.com/SB-IM/jsonrpc-lite/blob/master/LICENSE)
+
 Parse and Serialize JSON-RPC2 messages in golang
 
 [https://www.jsonrpc.org/specification](https://www.jsonrpc.org/specification)
 
 Interface Inspired by [https://github.com/teambition/jsonrpc-lite](https://github.com/teambition/jsonrpc-lite)
 
-ID Fork from http://golang.org/x/tools/internal/jsonrpc2
-
-[![Build Status](https://travis-ci.org/SB-IM/jsonrpc2.svg?branch=master)](https://travis-ci.org/SB-IM/jsonrpc2)
-
-JSON-RPC 2.0
-
-Base: https://github.com/golang/tools/commit/feee8acb394c170fe9eb4eb9f538b8877d9a3cd4
+ID Fork from [golang.org/x/tools/internal/jsonrpc2@feee8acb394c170fe9eb4eb9f538b8877d9a3cd4](https://github.com/golang/tools/commit/feee8acb394c170fe9eb4eb9f538b8877d9a3cd4)
 
 ## Features
 
@@ -22,7 +21,7 @@ Base: https://github.com/golang/tools/commit/feee8acb394c170fe9eb4eb9f538b8877d9
 - Support batch
 - Only Parse and Serialize JSON-RPC2 messages
 
-## Use
+## Examples
 
 ### Recv
 
