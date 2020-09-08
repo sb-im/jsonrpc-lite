@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+func TestErrorsNil(t *testing.T) {
+	var rpcErr *Errors
+	if m := rpcErr.Error(); m != "" {
+		t.Error(m)
+	}
+}
+
 func TestParseError(t *testing.T) {
 	rawData := "23333333"
 	rpcErr := &Errors{}
