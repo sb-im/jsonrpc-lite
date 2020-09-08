@@ -4,6 +4,8 @@
 [![Build Status](https://travis-ci.org/SB-IM/jsonrpc-lite.svg?branch=master)](https://travis-ci.org/SB-IM/jsonrpc-lite)
 [![codecov](https://codecov.io/gh/SB-IM/jsonrpc-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/SB-IM/jsonrpc-lite)
 [![Documentation](https://godoc.org/github.com/SB-IM/jsonrpc-lite?status.svg)](http://godoc.org/github.com/SB-IM/jsonrpc-lite)
+[![Go Report Card](https://goreportcard.com/badge/github.com/SB-IM/jsonrpc-lite)](https://goreportcard.com/report/github.com/SB-IM/jsonrpc-lite)
+[![GitHub release](https://img.shields.io/github/tag/SB-IM/jsonrpc-lite.svg?label=release)](https://github.com/SB-IM/jsonrpc-lite/releases)
 [![license](https://img.shields.io/github/license/SB-IM/jsonrpc-lite.svg?maxAge=2592000)](https://github.com/SB-IM/jsonrpc-lite/blob/master/LICENSE)
 
 Parse and Serialize JSON-RPC2 messages in golang
