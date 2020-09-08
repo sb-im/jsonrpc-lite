@@ -45,9 +45,56 @@ func TestNotify(t *testing.T) {
 	}
 }
 
+func TestToJSON(t *testing.T) {
+	jsonrpc := &Jsonrpc{
+		Type: TypeSuccess,
+	}
+
+	// Test ToJSON error
+	raw, err := jsonrpc.ToJSON()
+	if err == nil {
+		t.Error("Should is error", raw)
+	}
+}
+
+func TestNewNotify(t *testing.T) {
+	method := "test_notify"
+	params := &Errors{
+		Code:    2333,
+		Message: "_(:з」∠)_",
+	}
+
+	raw, err := NewNotify(method, params).ToJSON()
+	if err != nil {
+		t.Error(err)
+	}
+
+	rpc := ParseObject(raw)
+
+	if rpc.Type != TypeNotify {
+		t.Error(rpc)
+	}
+	if rpc.Method != method {
+		t.Error(rpc.Method)
+		t.Error(rpc)
+	}
+}
+
 func TestNewError(t *testing.T) {
-	rpc := ParseObject([]byte("233"))
-	if rpc.Type != TypeInvalid {
+	err := &Errors{
+		Code:    2333,
+		Message: "_(:з」∠)_",
+	}
+
+	rpc := NewError(1, 2333, "EEEEEEEEE", err)
+
+	if rpc.Errors.Code != 2333 {
+		t.Error(rpc)
+		t.Errorf("%s\n", rpc.Errors.Data)
+	}
+
+	rpc.Errors.MethodNotFound(nil)
+	if rpc.Errors.Code != CodeMethodNotFound {
 		t.Error(rpc)
 	}
 }
