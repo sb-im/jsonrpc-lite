@@ -5,6 +5,27 @@ import (
 	"testing"
 )
 
+func TestIDString(t *testing.T) {
+	var id *ID
+	if m := id.String(); m != "" {
+		t.Error(m)
+	}
+
+	id = &ID{
+		Number: 233,
+	}
+	if m := id.String(); m != `#233` {
+		t.Error(m)
+	}
+
+	id = &ID{
+		Name: "233",
+	}
+	if m := id.String(); m != `"233"` {
+		t.Error(m)
+	}
+}
+
 func TestNewID(t *testing.T) {
 	strID := "233"
 	id := &ID{
@@ -32,12 +53,15 @@ func TestNewID(t *testing.T) {
 }
 
 func TestNewNumberID(t *testing.T) {
-	numberID := 233
+	numberID := 23
 	id := &ID{
 		Number: int64(numberID),
 	}
 
 	if fmt.Sprint(id) != fmt.Sprint(NewID(numberID)) {
+		t.Error("Not ID: ", id)
+	}
+	if fmt.Sprint(id) != fmt.Sprint(NewID(int8(numberID))) {
 		t.Error("Not ID: ", id)
 	}
 	if fmt.Sprint(id) != fmt.Sprint(NewID(int16(numberID))) {
