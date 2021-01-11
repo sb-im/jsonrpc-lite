@@ -21,7 +21,7 @@ func TestIDString(t *testing.T) {
 	id = &ID{
 		Name: "233",
 	}
-	if m := id.String(); m != `"233"` {
+	if m := id.String(); m != "233" {
 		t.Error(m)
 	}
 }

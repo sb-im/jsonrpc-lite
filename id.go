@@ -24,7 +24,7 @@ func (id *ID) String() string {
 		return ""
 	}
 	if id.Name != "" {
-		return strconv.Quote(id.Name)
+		return id.Name
 	}
 	return "#" + strconv.FormatInt(id.Number, 10)
 }
