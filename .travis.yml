@@ -8,7 +8,6 @@ go:
   - master
 
 script:
-  - go mod init github.com/SB-IM/jsonrpc-lite
   - go test -race -coverprofile=coverage.txt -covermode=atomic
 
 after_success:
