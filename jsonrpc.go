@@ -102,7 +102,10 @@ func (t *Jsonrpc) getType() int {
 
 // New Request
 func NewRequest(id interface{}, method string, params interface{}) *Jsonrpc {
-	rawParams, _ := marshalToRaw(params)
+	var rawParams *json.RawMessage
+	if params != nil {
+		rawParams, _ = marshalToRaw(params)
+	}
 	return &Jsonrpc{
 		Type:   TypeRequest,
 		ID:     NewID(id),
@@ -113,7 +116,10 @@ func NewRequest(id interface{}, method string, params interface{}) *Jsonrpc {
 
 // New Notification, No ID
 func NewNotify(method string, params interface{}) *Jsonrpc {
-	rawParams, _ := marshalToRaw(params)
+	var rawParams *json.RawMessage
+	if params != nil {
+		rawParams, _ = marshalToRaw(params)
+	}
 	return &Jsonrpc{
 		Type:   TypeNotify,
 		Method: method,

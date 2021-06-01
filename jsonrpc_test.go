@@ -180,3 +180,15 @@ func TestRun(t *testing.T) {
 		t.Errorf("%s\n", data)
 	}
 }
+
+func TestNewReqNoParams(t *testing.T) {
+	data, _ := NewNotify("test", nil).ToJSON()
+	if string(data) != `{"jsonrpc":"2.0","method":"test"}` {
+		t.Errorf("%s\n", data)
+	}
+
+	data, _ = NewRequest(1, "test", nil).ToJSON()
+	if string(data) != `{"jsonrpc":"2.0","method":"test","id":1}` {
+		t.Errorf("%s\n", data)
+	}
+}
