@@ -1,11 +1,11 @@
 # jsonrpc-lite
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/SB-IM/jsonrpc-lite)](https://pkg.go.dev/github.com/SB-IM/jsonrpc-lite)
-[![Build Status](https://travis-ci.org/SB-IM/jsonrpc-lite.svg?branch=master)](https://travis-ci.org/SB-IM/jsonrpc-lite)
-[![codecov](https://codecov.io/gh/SB-IM/jsonrpc-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/SB-IM/jsonrpc-lite)
-[![Go Report Card](https://goreportcard.com/badge/github.com/SB-IM/jsonrpc-lite)](https://goreportcard.com/report/github.com/SB-IM/jsonrpc-lite)
-[![GitHub release](https://img.shields.io/github/tag/SB-IM/jsonrpc-lite.svg?label=release)](https://github.com/SB-IM/jsonrpc-lite/releases)
-[![license](https://img.shields.io/github/license/SB-IM/jsonrpc-lite.svg?maxAge=2592000)](https://github.com/SB-IM/jsonrpc-lite/blob/master/LICENSE)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/sb-im/jsonrpc-lite)](https://pkg.go.dev/github.com/sb-im/jsonrpc-lite)
+[![Build Status](https://github.com/sb-im/jsonrpc-lite/workflows/ci/badge.svg)](https://github.com/sb-im/jsonrpc-lite/actions?query=workflow%3Aci)
+[![codecov](https://codecov.io/gh/sb-im/jsonrpc-lite/branch/master/graph/badge.svg)](https://codecov.io/gh/sb-im/jsonrpc-lite)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sb-im/jsonrpc-lite)](https://goreportcard.com/report/github.com/sb-im/jsonrpc-lite)
+[![GitHub release](https://img.shields.io/github/tag/sb-im/jsonrpc-lite.svg?label=release)](https://github.com/sb-im/jsonrpc-lite/releases)
+[![license](https://img.shields.io/github/license/sb-im/jsonrpc-lite.svg?maxAge=2592000)](https://github.com/sb-im/jsonrpc-lite/blob/master/LICENSE)
 
 Parse and Serialize JSON-RPC2 messages in golang
 
