@@ -1,3 +1,3 @@
-module github.com/SB-IM/jsonrpc-lite
+module github.com/sb-im/jsonrpc-lite
 
 go 1.13

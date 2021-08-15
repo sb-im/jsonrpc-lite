@@ -29,7 +29,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/SB-IM/jsonrpc-lite"
+	"github.com/sb-im/jsonrpc-lite"
 )
 
 func main() {
